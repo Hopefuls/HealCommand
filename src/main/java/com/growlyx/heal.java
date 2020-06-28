@@ -7,6 +7,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.command.ConsoleCommandSender;
+
 
 public class heal extends JavaPlugin {
 
@@ -26,8 +28,12 @@ public class heal extends JavaPlugin {
 
     @SuppressWarnings("deprecation")
     public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args) {
-        Player player = (Player) sender;
         if (cmd.getName().equalsIgnoreCase("heal")) {
+            if (sender instanceof ConsoleCommandSender) {
+                sender.sendMessage("This command can only be used as a player!");
+                return true;
+            }
+            Player player = (Player) sender;
             if (player.isOp() || (player.hasPermission("heal.heal"))) {
             } else {
                 player.sendMessage(ChatColor.RED + "Sorry, you do not have permission to use that command.");
