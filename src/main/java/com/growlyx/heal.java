@@ -1,9 +1,11 @@
 package com.growlyx;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class heal extends JavaPlugin {
@@ -12,6 +14,8 @@ public class heal extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("HealCommand V1.0 Enabled");
+
+        Bukkit.getPluginManager().registerEvents((Listener) new ToggleListener(), this);
     }
 
     @Override
