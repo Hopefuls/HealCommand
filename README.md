@@ -1,0 +1,4 @@
+# HealCommand
+
+# Commands
+- Heal
