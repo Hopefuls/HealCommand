@@ -1,0 +1,14 @@
+name: Heal
+version: ${project.version}
+main: com.growlyx.heal
+api-version: 1.15.2
+prefix: [Heal]
+load: STARTUP
+depend: [None]
+softdepend: [None]
+authors: [GrowlyX]
+description: Simple Heal Command, with one permission.
+website: https://pvpx.net/
+commands:
+  heal:
+    aliases: [hl, healme, heall]
