@@ -11,4 +11,4 @@ description: Simple Heal Command, with one permission.
 website: https://pvpx.net/
 commands:
   heal:
-    aliases: [hl, healme, heall]
+    aliases: [hl, healme, meheal, growlyxheal]
