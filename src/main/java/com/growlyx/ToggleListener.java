@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.util.ArrayList;
 
-public class ToggleListener extends JavaPlugin {
+public class ToggleListener extends JavaPlugin implements Listener{
 
     ArrayList<Player> enabled = new ArrayList<>();
 
