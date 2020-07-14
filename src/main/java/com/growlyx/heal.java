@@ -17,7 +17,7 @@ public class heal extends JavaPlugin {
     public void onEnable() {
         System.out.println("HealCommand V1.0 Enabled");
 
-        Bukkit.getPluginManager().registerEvents((Listener) new ToggleListener(), this);
+        Bukkit.getPluginManager().registerEvents(new ToggleListener(), this);
     }
 
     @Override
